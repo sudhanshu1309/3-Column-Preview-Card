@@ -1,0 +1,140 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $veryLightGray;
+  font-family: $fontBig;
+  color: $transparentWhite;
+  line-height: 1.3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  margin: auto;
+  border-radius: 10px;
+  //   margin: 88px 24px;
+  max-width: 328px;
+  margin-top: 88px;
+  margin-bottom: 88px;
+
+  @include breakpoint(large) {
+    max-width: none;
+    border-radius: 12px;
+    margin: 170px 262px;
+    margin-bottom: 124px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .sedans {
+    background-color: $brightOrange;
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+    padding-left: 48px;
+
+    @include breakpoint(large) {
+      border-radius: 0;
+      border-start-start-radius: 10px;
+      border-end-start-radius: 10px;
+    }
+
+    button {
+      color: $brightOrange;
+
+      &:hover {
+        background-color: $brightOrange;
+        color: $transparentWhite;
+      }
+    }
+  }
+
+  .suvs {
+    background-color: $darkCyan;
+    padding-left: 48px;
+
+    @include breakpoint(large) {
+    }
+
+    button {
+      color: $darkCyan;
+
+      &:hover {
+        background-color: $darkCyan;
+        color: $transparentWhite;
+      }
+    }
+  }
+
+  .luxury {
+    background-color: $veryDarkCyan;
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
+    padding-left: 48px;
+
+    @include breakpoint(large) {
+      border-radius: 0;
+      border-start-end-radius: 10px;
+      border-end-end-radius: 10px;
+    }
+
+    button {
+      color: $veryDarkCyan;
+
+      &:hover {
+        background-color: $veryDarkCyan;
+        color: $transparentWhite;
+      }
+    }
+  }
+}
+
+img {
+  padding-top: 48px;
+  padding-bottom: 38px;
+}
+
+h3 {
+  font-size: 34px;
+  font-weight: 700;
+  color: $veryLightGray;
+  padding-bottom: 38px;
+}
+
+p {
+  font-family: $fontLexand;
+  font-size: 15px;
+  font-weight: 400;
+  padding-bottom: 28px;
+  padding-right: 90px;
+
+  @include breakpoint(large) {
+    padding-right: 64px;
+  }
+}
+
+button {
+  border-radius: 22px;
+  background-color: $veryLightGray;
+  width: 146px;
+  height: 48px;
+  margin-bottom: 48px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid $transparentWhite;
+  }
+}
